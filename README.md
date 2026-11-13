@@ -232,14 +232,6 @@ The app deploys cleanly to [Vercel](https://vercel.com/):
 
 ---
 
-## Roadmap ideas
-
-- Team logos on the team cards
-- Bid history and a countdown timer
-- Atomic sell/refund updates through a Postgres function
-
----
-
 <div align="center">
 
 Built for the KNIT Futsal League.
