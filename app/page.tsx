@@ -90,7 +90,7 @@ export default function Home() {
         <header className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
           <div className="flex items-center gap-4">
             <img 
-              src="/logo.png" 
+              src="/icon.png" 
               alt="KNIT Futsal League Logo" 
               className="h-12 w-auto object-contain" 
             />
