@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { loadAll, subscribeAuction, type AuctionState, type Player, type Team } from "@/lib/supabase";
 import PitchBackground from "@/components/PitchBackground";
 import PlayersSection from "@/components/PlayerSection";
+import Image from 'next/image';
 
 function CountUp({ value }: { value: number }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -86,15 +87,22 @@ export default function Home() {
         </svg>
 
         <div className="relative mx-auto max-w-7xl px-5 py-6 sm:px-8 sm:py-8">
-          <header className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
-            <h1 className="font-display text-2xl uppercase tracking-wide sm:text-3xl">
+        <header className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+          <div className="flex items-center gap-4">
+            <img 
+              src="/logo.png" 
+              alt="KNIT Futsal League Logo" 
+              className="h-12 w-auto object-contain" 
+            />
+            <h1 className="font-display text-2xl sm:text-3xl uppercase tracking-wide">
               KNIT Futsal League – Live Auction
             </h1>
-            <p className="flex items-center gap-2 text-sm text-white/80" aria-live="polite">
-              <span className={`h-2.5 w-2.5 rounded-full ${onBlock ? "animate-pulse bg-cyan motion-reduce:animate-none" : "bg-white/30"}`} />
-              {onBlock ? "Bidding is open" : "Between players"}
-            </p>
-          </header>
+          </div>
+          <p className="flex items-center gap-2 text-sm text-white/80" aria-live="polite">
+            <span className={`h-2.5 w-2.5 rounded-full ${onBlock ? "animate-pulse bg-cyan motion-reduce:animate-none" : "bg-white/30"}`} />
+            {onBlock ? "Bidding is open" : "Between players"}
+          </p>
+        </header>
 
           <div className="mt-12 grid gap-8 sm:mt-16 lg:grid-cols-[1fr_auto] lg:items-end">
             {onBlock && state ? (
